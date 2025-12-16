@@ -25,8 +25,7 @@ jobs:
 
     - name: Build Project
       run: msbuild GF281Tests/GF281Tests.vcxproj /p:Configuration=Release /p:Platform=x64 /p:SolutionDir=.
-
+    
     - name: Run Unit Tests
       run: |
-        cd x64/Release
-        .\GF281Tests.exe
+        Get-ChildItem -Recurse -Filter GF281Tests.exe | Select-Object -First 1 | ForEach-Object { & $_.FullName }
