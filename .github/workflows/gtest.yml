@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Test (Direct Project Build)
 
 on:
   push:
@@ -21,15 +21,12 @@ jobs:
       uses: NuGet/setup-nuget@v2
 
     - name: Restore NuGet Packages
+      run: nuget restore GF281Tests/GF281Tests.vcxproj -SolutionDirectory .
 
-      run: nuget restore LAb3.slnx
-
-    - name: Build Solution
-
-      run: msbuild LAb3.slnx /p:Configuration=Release /p:Platform=x64
+    - name: Build Project
+      run: msbuild GF281Tests/GF281Tests.vcxproj /p:Configuration=Release /p:Platform=x64 /p:SolutionDir=.
 
     - name: Run Unit Tests
-
       run: |
         cd x64/Release
         .\GF281Tests.exe
