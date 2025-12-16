@@ -22,7 +22,7 @@ jobs:
 
     - name: Restore NuGet Packages
 
-      run: nuget restore LAb3.sln
+      run: nuget restore LAb3.slnx
 
     - name: Build Solution
 
