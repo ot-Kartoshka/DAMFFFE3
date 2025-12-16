@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/.github/" />
+  <Folder Name="/.github/workflows/">
+    <File Path=".github/workflows/gtest.yml" />
+  </Folder>
+  <Folder Name="/Элементы решения/" />
+  <Project Path="GF281Tests/GF281Tests.vcxproj" Id="0c07e2a8-32de-4040-9f8b-a363463e3f62" />
+  <Project Path="LAb3/LAb3.vcxproj" Id="5fa145c2-3702-4b16-b002-3bbc23eaec66" />
+</Solution>
