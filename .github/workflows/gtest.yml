@@ -26,7 +26,7 @@ jobs:
 
     - name: Build Solution
 
-      run: msbuild LAb3.sln /p:Configuration=Release /p:Platform=x64
+      run: msbuild LAb3.slnx /p:Configuration=Release /p:Platform=x64
 
     - name: Run Unit Tests
 
